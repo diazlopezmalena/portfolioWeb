@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERALES: animación */
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+@keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+/* GENERALES */
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(56, 56, 56);
+    line-height : 27px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* GENERALES: TRANSFORMACIÓN con TRANSICIÓN */
+
+button{
+    padding: 10px 30px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #E8B5B5;
+    transform: scale(1, 1);   
+    font-size: 100%;
+}
+
+/* HEADER CON FLEXBOX */
+
+.header {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+}
+
+.headerLogo {
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerNav {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.headerNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.headerNav ul li {
+    font-family: 'Roboto', sans-serif;
+    color:#000000;
+    font-weight: bolder;
+}
+
+/* HEADER CON FLEXBOX: GRADIENTE */
+
+ul li a:hover {
+    background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* GRID */
+
+.main {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 85vh 30vh 80vh 30vh 60vh 30vh 60vh;
+    grid-template-areas:"uno"
+                        "separador"
+                        "dos"
+                        "separadordos"
+                        "tres"
+                        "separadortres"
+                        "cuatro";
+}
+
+/* FLEXBOX */
+
+.mainPresentacion {
+    grid-area: uno;
+    background-image: url(../images/fondoPortada.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainPresentacionText h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: #141414de;
+    text-align: center;
+}
+
+.mainPresentacionText h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #fdf3f3;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #0000001e;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* ANIMACIÓN - LÍNEA DEL TIEMPO */
+
+.mainPresentacionText svg {
+    position: relative;
+    top: 20px;
+    left: 45%;
+    opacity: 0.1;
+    animation-name: flecha;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+@keyframes flecha {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translate(0px, 20px);
+        opacity: 0.5;
+    }
+}
+
+.separadorServiciosTitulo {
+    grid-area: separador;
+    background-image: url(../images/separadorServicios.png);
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mainServicios {
+    grid-area: dos;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainServiciosCajas {
+    border-top: solid 10px;
+    border-radius: 0px 0px 20px 20px;
+    border-color: #FFD0C0;
+    border-color: #E8B5B5;
+    background-color: #000000;
+    padding: 5px;
+    margin: 10px;
+    width: 23%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 4px rgb(95, 95, 95);
+}
+
+.mainServiciosCajas img {
+    width: 230px;
+    position: relative;
+    left: 10%;
+}
+
+.mainServiciosCajas p {
+    font-size: 17px;
+    color: #e7e3e3;
+    text-align: center;
+    padding: 5px;
+}
+
+.separadorPortfolioTitulo {
+    grid-area: separadordos;
+    background-image: url(../images/separadorPortfolio.png);
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F8E5CE;
+    height: 30vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mainPortfolio {
+    grid-area: tres;
+    background-color: #F8E5CE;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.separadorSobremiTitulo {
+    grid-area: separadortres;
+    background-image: url(../images/separadorSobremi.png);
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    height: 30vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mainSobremi {
+    grid-area: cuatro;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainSobremiImage {
+    height: 83%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainSobremiPyB {
+    width: 50%;
+    text-align: justify;
+    position: relative;
+    left: 30px;
+    color: #1a1a1a;
+}
+
+.mainSobremiPyB button {
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+
+/* FOOTER CON GRID */
+
+/* FOOTER CON GRID: GRADIENTE */
+
+.footer {
+    height: 300px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, black , rgb(53, 53, 53) , rgb(136, 136, 136));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:"titulo ."
+                        "boton contacto";
+    justify-items: center;
+    align-items:center;
+}
+
+.footerTitulo {
+    grid-area: titulo;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    align-self: flex-end;
+}
+
+.footerBoton {
+    grid-area: boton;
+}
+
+/* FOOTER CON GRID: TRANSFORMACIÓN con TRANSICIÓN y GRADIENTE */
+
+.footerBoton button {
+    width: 300px;
+    height: 50px;
+    font-size: 100%;
+    background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
+    transition: all 1s;
+}
+
+.footerBoton button:hover {
+    transform: scale(1.3);   
+    font-size: 100%;
+}
+
+.footerBoton button a {
+    color: black;
+}
+
+.footerContacto {
+    grid-area: contacto;
+    font-family: 'Roboto', sans-serif;
+    color: #dec2d0;
+    font-size: 20px;
+}
+
+.footerContactoRedes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* FOOTER CON GRID: TRANSFORMACIÓN con TRANSICIÓN */
+
+.footerContactoRedes a {
+    transition: all 0.5s;
+}
+
+.footerContactoRedes a:hover {
+    transform: rotateZ(20deg);
+}
+
+/* OTRAS PAGES */
+
+/* servicios */
+
+table {
+    margin: 50px;
+    height: auto;
+}
+
+th {
+    background-color: rgb(43, 43, 43);
+    border: 1px solid;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(240, 240, 240);
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+tr td {
+    padding: 1%;
+    background-color: #F8E5CE;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(56, 56, 56);
+    font-size: 15px;
+    line-height : 20px;
+    border-radius: 5px;
+}
+
+.negrita {
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px;
+}
+
+td ul {
+    position: relative;
+    left: 10px;
+}
+
+
+/* Portfolio */
+
+.contenedorPortfolio {
+    background-color: #F8E5CE;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 85vh 60vh 60vh;
+    grid-template-areas:"cotillon cotillon"
+                        "esoi psicosocial"
+                        "atech aulavirtual";
+    padding: 50px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.contenedorPortfolioCotillon {
+    grid-area: cotillon;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+contenedorPortfolioEsoi {
+    grid-area: esoi;
+    width: 100%;
+}
+
+.contenedorPortfolioPsicosocial {
+    grid-area: psicosocial;
+    width: 100%;
+}
+
+.contenedorPortfolioAtech {
+    grid-area: atech;
+    width: 100%;
+}
+
+.contenedorPortfolioAulavirtual {
+    grid-area: aulavirtual;
+    width: 100%;
+}
+
+/* Sobremi */
+
+.contenedorCV {
+    height: 100%;
+    width: 100%;
+}
+
+.contenedorCV img {
+    max-width: 100%;
+}
+
+.descargarCV {
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+    border-top: #f3f3f3 solid;
+    padding-top: 15px;
+}
+
+.descargarCV:hover{
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
+}
+
+.descargarCV a p:hover{
+    color: #E8B5B5;
+
+}
+
+/* Contacto */
+
+#contacto {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    font-size:50px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+input {
+    width: 200px; 
+    height: 30px;
+    margin: 10px;
+    transition: all 1s;  
+}
+
+input:focus {
+    width: 250px;
+}
+
+.contenedorContacto {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px rgb(161, 161, 161);
+    width: 50%;
+    height: auto;
+    margin: 30px;
+    padding: 10px;
+    position: relative;
+    left: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contenedorContacto fieldset {
+    padding: 30px;
+    border: #F8E5CE solid;
+    border-radius: 5px;
+    width: 80%;
+}
+ 
