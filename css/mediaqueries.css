@@ -1,0 +1,275 @@
+@media only screen and (max-width:1024px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .mainServiciosCajas {
+        margin: 10px;
+        width: 95%;
+    }
+
+    #mainPortfolioCarousel {
+        margin-top: 30px;
+    }
+
+    .mainSobremi {
+        justify-content: space-around;
+    }
+
+    .mainSobremiPyB {
+        width: auto;
+        position: relative;
+        top: 30px;
+        color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 17px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+
+    .mainSobremiImage {
+        height: auto;
+        width: auto;
+    }
+
+    .footerTitulo h2 {
+        font-size: 40px;
+    }
+
+    /* OTRAS PAGES */
+    /* Contacto */
+    .contenedorContacto {
+        width: 70%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .main {
+        grid-template-rows: 90vh 30vh auto 30vh auto 30vh auto;
+    }
+
+    .mainPresentacion {
+        padding: 35px;
+    }
+    
+    .mainPresentacionText h2 {
+        font-size: 20px;
+        padding: 3px;
+    }
+
+    .separadorServiciosTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 28vh;
+    }
+
+    .separadorServiciosTitulo h2 {
+        font-size: 60px;
+    }
+
+    .mainServicios {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .mainServiciosCajas {
+        margin: 10px;
+        width: 70%;
+    }
+
+    .separadorPortfolioTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 30vh;
+    }
+
+    .separadorPortfolioTitulo h2 {
+        font-size: 60px;
+    }
+
+    #mainPortfolioCarousel {
+        margin-top: 30px;
+        width: 95%;
+    }
+
+    #mainPortfolioButton {
+        padding-bottom: 40px;
+    }
+
+    .separadorSobremiTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 30vh;
+    }
+
+    .separadorSobremiTitulo h2 {
+        font-size: 60px;
+    }
+
+    .mainSobremi {
+        padding-top: 20px;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .mainSobremiPyB {
+        width: 80%;
+        text-align: justify;
+        position: relative;
+        top: 30px;
+        left: 0px;
+        color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 17px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footerTitulo {
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        align-self: center;
+        position: relative;
+        top: 25px;
+    }
+
+    .footerTitulo h2 {
+        font-size: 55px;
+    }
+
+    /* OTRAS PAGES */
+    /* Contacto */
+    .contenedorContacto {
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .main {
+        grid-template-rows: 90vh 30vh auto 30vh auto 30vh auto;
+    }
+
+    .mainPresentacion {
+        padding: 35px;
+    }
+    
+    .mainPresentacionText h2 {
+        font-size: 20px;
+        padding: 3px;
+    }
+
+    .separadorServiciosTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 28vh;
+    }
+
+    .separadorServiciosTitulo h2 {
+        font-size: 60px;
+    }
+
+    .mainServicios {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .mainServiciosCajas {
+        margin: 10px;
+        width: 70%;
+    }
+
+    .separadorPortfolioTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 30vh;
+    }
+
+    .separadorPortfolioTitulo h2 {
+        font-size: 60px;
+    }
+
+    #mainPortfolioCarousel {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #mainPortfolioButton {
+        padding-bottom: 40px;
+    }
+
+    .separadorSobremiTitulo {
+        background-size:100%;
+        align-items: flex-end;
+        height: 30vh;
+    }
+
+    .separadorSobremiTitulo h2 {
+        font-size: 60px;
+    }
+
+    .mainSobremi {
+        padding-top: 20px;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .mainSobremiPyB {
+        width: 80%;
+        text-align: justify;
+        position: relative;
+        top: 30px;
+        left: 0px;
+        color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 17px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+
+    .footerTitulo {
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        align-self: center;
+        position: relative;
+        top: 25px;
+    }
+
+    .footerTitulo h2 {
+        font-size: 45px;
+    }
+
+    /* OTRAS PAGES */
+    /* Contacto */
+    .contenedorContacto {
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}

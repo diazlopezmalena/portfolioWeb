@@ -33,72 +33,55 @@ a {
     color: rgb(255, 255, 255);
 }
 
-/* GENERALES: TRANSFORMACIÓN con TRANSICIÓN */
+ul li a:hover {
+    background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
 
-button{
+button {
     padding: 10px 30px;
     border-color: black;
     border-radius: 5px;
     background-color: black;
     transition: all 0.5s;
+    color: white;
 }
 
 button:hover {
     background-color: #E8B5B5;
     transform: scale(1, 1);   
     font-size: 100%;
+    color: black;
 }
 
-/* HEADER CON FLEXBOX */
+/* HEADER BS */
 
-.header {
-    background-color: black;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
     position: sticky;
     z-index: 1;
     top: 0px;
 }
 
-.headerLogo {
-    margin-left: 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+#navBs {
+    height: auto;
+    padding: 0px;
 }
 
-.headerNav {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
+#navBsMenu {
+    background-color: #000000;
 }
 
-.headerNav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+#navbarScroll {
     width: 100%;
+    padding-left: 30%;
 }
 
-.headerNav ul li {
-    font-family: 'Roboto', sans-serif;
-    color:#000000;
-    font-weight: bolder;
-}
-
-/* HEADER CON FLEXBOX: GRADIENTE */
-
-ul li a:hover {
-    background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
+#navbarScroll ul li {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;;
 }
 
 /* GRID */
@@ -109,7 +92,7 @@ ul li a:hover {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 85vh 30vh 80vh 30vh 60vh 30vh 60vh;
+    grid-template-rows: 85vh 30vh 80vh 30vh auto 30vh 60vh;
     grid-template-areas:"uno"
                         "separador"
                         "dos"
@@ -187,10 +170,13 @@ ul li a:hover {
     font-family: 'Playfair Display', serif;
     color: #000000;
     text-align: center;
-    font-size: 35px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+}
+
+.separadorServiciosTitulo h2 {
+    font-size: 70px;
 }
 
 .mainServicios {
@@ -218,12 +204,6 @@ ul li a:hover {
     box-shadow: 5px 5px 4px rgb(95, 95, 95);
 }
 
-.mainServiciosCajas img {
-    width: 230px;
-    position: relative;
-    left: 10%;
-}
-
 .mainServiciosCajas p {
     font-size: 17px;
     color: #e7e3e3;
@@ -243,10 +223,13 @@ ul li a:hover {
     font-family: 'Playfair Display', serif;
     color: #000000;
     text-align: center;
-    font-size: 35px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+}
+
+.separadorPortfolioTitulo h2 {
+    font-size: 70px;
 }
 
 .mainPortfolio {
@@ -258,6 +241,22 @@ ul li a:hover {
     justify-content: center;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+#mainPortfolioCarousel {
+    margin-top: 30px;
+    border: solid black 5px;
+    width: 800px;
+    z-index: 0;
+}
+
+.mainPortfolio img {
+    max-width: 100%;
+}
+
+#mainPortfolioButton {
+    padding-top: 33px;
+    padding-bottom: 33px;
 }
 
 .separadorSobremiTitulo {
@@ -272,10 +271,13 @@ ul li a:hover {
     font-family: 'Playfair Display', serif;
     color: #000000;
     text-align: center;
-    font-size: 35px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+}
+
+.separadorSobremiTitulo h2 {
+    font-size: 70px;
 }
 
 .mainSobremi {
@@ -491,40 +493,34 @@ contenedorPortfolioEsoi {
     padding-top: 15px;
 }
 
+.descargarCV a {
+    color: black;
+    padding-left: 1%;
+}
+
 .descargarCV:hover{
     transform: scale(1.2, 1.2);
     transition: all 1s;
 }
 
-.descargarCV a p:hover{
+.descargarCV a:hover{
     color: #E8B5B5;
-
 }
 
 /* Contacto */
+
+#mainPContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 #contacto {
     font-family: 'Playfair Display', serif;
     color: #000000;
     font-size:50px;
-    text-align: center;
     margin-top: 10px;
-}
-
-form {
-    font-family: 'Roboto', sans-serif;
-    color: black;
-}
-
-input {
-    width: 200px; 
-    height: 30px;
-    margin: 10px;
-    transition: all 1s;  
-}
-
-input:focus {
-    width: 250px;
 }
 
 .contenedorContacto {
@@ -534,18 +530,24 @@ input:focus {
     width: 50%;
     height: auto;
     margin: 30px;
-    padding: 10px;
-    position: relative;
-    left: 25%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    padding: 20px;
 }
 
-.contenedorContacto fieldset {
-    padding: 30px;
-    border: #F8E5CE solid;
-    border-radius: 5px;
-    width: 80%;
+#contenedorContactoButton {
+    display: flex;
+    justify-content: center;
 }
- 
+
+#contenedorContactoButton button {
+    background-color: black;
+    border-color: black;
+    padding: 10px 30px;
+}
+
+#contenedorContactoButton button:hover {
+    background-color: #dec2d0;
+    border-color: black;
+    color: black;
+}
+
+
