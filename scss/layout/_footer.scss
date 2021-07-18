@@ -1,0 +1,43 @@
+/* FOOTER CON GRID */
+
+.footer {
+    height: 300px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, black , rgb(53, 53, 53) , rgb(136, 136, 136));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:"titulo ."
+                        "boton contacto";
+    justify-items: center;
+    align-items:center;
+
+    .footerTitulo {
+        grid-area: titulo;
+        color: #ffffff;
+        font-size: 30px;
+        font-family: $font-principal;
+        align-self: flex-end;
+    }
+
+    .footerContacto {
+        grid-area: contacto;
+        font-family: $font-principal;
+        color: #dec2d0;
+        font-size: 20px;
+    
+        .footerContactoRedes {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+    
+        .footerContactoRedes a {
+            transition: all 0.5s;
+        }
+
+        .footerContactoRedes a:hover {
+            transform: rotateZ(20deg);
+        }
+    }
+}

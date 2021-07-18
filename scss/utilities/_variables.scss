@@ -1,0 +1,21 @@
+$color-principal: rgb(39, 39, 39);
+$background-color-principal: #F8E5CE;
+
+//placeholder utilizado con extend en partial _grid *otras pages*
+%titulos {
+    background-size:60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh;
+    width: 100%;
+    font-family: $font-secundaria;
+    color: $color-principal;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+}

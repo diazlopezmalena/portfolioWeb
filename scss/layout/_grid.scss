@@ -1,0 +1,379 @@
+// HOME Y OTRAS PAGES
+
+/* HOME */
+
+.main {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 85vh 30vh 80vh 30vh auto 30vh 60vh;
+    grid-template-areas:"uno"
+                        "separador"
+                        "dos"
+                        "separadordos"
+                        "tres"
+                        "separadortres"
+                        "cuatro";
+
+    .mainPresentacion {
+        grid-area: uno;
+        background-image: url(../images/fondoPortada.png);
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-family: $font-principal;
+            font-size: 60px;
+            color: $color-principal;
+            text-align: center;
+            animation-duration: 2s;
+            animation-name: aparecer;
+
+            @keyframes aparecer {
+                from {
+                opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+        }
+
+        h2 {
+            font-family: $font-secundaria;
+            font-size: 23px;
+            color: #fdf3f3;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #0000001e;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        svg {
+            position: relative;
+            top: 20px;
+            opacity: 0.1;
+            animation-name: flecha;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 1s;
+            animation-delay: 2s;
+        
+            @keyframes flecha {
+                0% {
+                    transform: translate(0px, 0px);
+                    opacity: 0.1;
+                }
+                100% {
+                    transform: translate(0px, 20px);
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .separadorServiciosTitulo {
+        grid-area: separador;
+        background-image: url(../images/separadorServicios.png);
+        background-size:60%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 30vh;
+        width: 100%;
+        font-family: $font-secundaria;
+        color: $color-principal;
+        text-align: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        
+        h2 {
+            font-size: 70px;
+        }
+    }
+
+    .mainServicios {
+        grid-area: dos;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .mainServiciosCajas {
+            border-top: solid 10px;
+            border-radius: 0px 0px 20px 20px;
+            border-color: #E8B5B5;
+            background-color: #000000;
+            padding: 5px;
+            margin: 10px;
+            width: 23%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            box-shadow: 5px 5px 4px rgb(95, 95, 95);
+        }
+        
+        p {
+            font-size: 17px;
+            color: #e7e3e3;
+            text-align: center;
+            padding: 5px;
+            font-family: $font-principal;
+        }
+    }
+
+    .separadorPortfolioTitulo {
+        grid-area: separadordos;
+        background-image: url(../images/separadorPortfolio.png);
+        background-size:50%;
+        background-color: $background-color-principal;
+        @extend .separadorServiciosTitulo;
+    }
+
+    .mainPortfolio {
+        grid-area: tres;
+        background-color: $background-color-principal;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .separadorSobremiTitulo {
+        grid-area: separadortres;
+        background-image: url(../images/separadorSobremi.png);
+        @extend .separadorServiciosTitulo;
+    }
+
+    .mainSobremi {
+        grid-area: cuatro;
+        background-color: #ffffff;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .mainSobremiImage {
+            height: 83%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .mainSobremiPyB {
+            width: 50%;
+            text-align: justify;
+            position: relative;
+            left: 30px;
+            color: $color-principal;
+            font-family: $font-principal;
+        }
+    }
+}
+
+/* OTRAS PAGES */
+
+/** servicios **/
+
+.serviciosEncabezado {
+    background-image: url(../images/separadorServicios.png);
+    @extend %titulos;
+}
+
+.contenedorDetalles {
+    width: 100%;
+    margin: 40px 0px 40px 0px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:". desarrollo ."
+                        ". plani ."
+                        ". contenidos .";
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 20px;
+
+    .contenedorDetallesDesarrollo {
+        grid-area: desarrollo;
+        padding: 40px;
+        border-top: solid 10px;
+        border-radius: 0px 0px 20px 20px;
+        border-color: black;
+        background-color: $background-color-principal;
+    
+        h2 {
+            font-family: $font-principal;
+            font-weight: bolder;
+            color: $color-principal;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-family: $font-principal;
+            text-align: justify;
+        }
+    }
+
+    .contenedorDetallesPlanificacion {
+        grid-area: plani;
+        @extend .contenedorDetallesDesarrollo;
+    }
+
+    .contenedorDetallesContenidos {
+        grid-area: contenidos;
+        @extend .contenedorDetallesDesarrollo;
+    }
+}
+
+/** Portfolio **/
+
+.portfolioEncabezado {
+    background-image: url(../images/separadorPortfolio.png);
+    background-color: $background-color-principal;
+    @extend %titulos;
+}
+
+.contenedorPortfolio {
+    background-color: $background-color-principal;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 85vh 60vh 60vh;
+    grid-template-areas:"cotillon cotillon"
+                        "esoi psicosocial"
+                        "atech aulavirtual";
+    padding: 50px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    .contenedorPortfolioCotillon {
+        grid-area: cotillon;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedorPortfolioEsoi {
+        grid-area: esoi;
+        width: 100%;
+    }
+
+    .contenedorPortfolioPsicosocial {
+        grid-area: psicosocial;
+        width: 100%;
+    }
+
+    .contenedorPortfolioAtech {
+        grid-area: atech;
+        width: 100%;
+    }
+
+    .contenedorPortfolioAulavirtual {
+        grid-area: aulavirtual;
+        width: 100%;
+    }
+}
+
+/** Sobremi **/
+
+.sobreMiEncabezado {
+    background-image: url(../images/separadorSobremi.png);
+    @extend %titulos;
+}
+
+.descargarCV {
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-principal;
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+    border-top: #f3f3f3 solid;
+    padding-top: 15px;
+    
+    a {
+        color: black;
+        padding-left: 1%;
+    }
+}
+
+.descargarCV:hover{
+        transform: scale(1.2, 1.2);
+        transition: all 1s;
+}
+
+.descargarCV a:hover{
+        color: #E8B5B5;
+}
+
+.contenedorCV {
+    height: 100%;
+    width: 100%;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+/** Contacto **/
+
+.mainPContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #contacto {
+        font-family: 'Playfair Display', serif;
+        color: #000000;
+        font-size:50px;
+        margin-top: 10px;
+    }
+
+    .contenedorContacto {
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        box-shadow: 8px 8px 5px rgb(161, 161, 161);
+        width: 50%;
+        height: auto;
+        margin: 30px;
+        padding: 20px;
+        font-family: $font-principal;
+    }
+
+    #contenedorContactoButton {
+        display: flex;
+        justify-content: center;
+    
+        button {
+            background-color: black;
+            border-color: black;
+            padding: 10px 30px;
+        }
+    
+        button:hover {
+            background-color: #dec2d0;
+            border-color: black;
+            color: black;
+        }
+    }
+}

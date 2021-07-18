@@ -1,0 +1,37 @@
+/* BOTÓN DEL FOOTER */
+
+.footerBoton {
+    grid-area: boton;
+
+    button {
+        @include botonEstilo(300px, 50px, rgb(235, 235, 235), black, 5px, black);
+        background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
+        transition: all 1s;
+        font-family: $font-principal;
+    }
+
+    button:hover {
+        transform: scale(1.2);   
+        font-size: 100%;
+    }
+}
+
+/* BOTONES DE LA HOME */
+
+.button {
+    @include botonEstilo(auto, auto, black, white, 5px, black);
+    padding: 10px; 
+    transition: all 0.5s;
+    font-family: $font-principal;
+    margin: 30px;
+}
+
+button:hover {
+    background-color: #E8B5B5;
+    transform: scale(1, 1);   
+    font-size: 100%;
+}
+
+a:hover {
+    color: black;
+}

@@ -1,0 +1,40 @@
+/* NAV BS */
+
+.navBs {
+    height: auto;
+    padding: 0px;
+
+    .navBsMenu {
+        background-color: #000000;
+    }
+
+    .navBsUl {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        font-family: $font-principal;
+        font-size: 17px;
+
+        li {
+            padding: 1.5%;
+        }
+        
+        a:hover {
+            background-image: linear-gradient(to right, #dec2d0, #E8B5B5);
+            border-radius: 5px;
+        }
+    }
+}
+
+/* CAROUSEL BS */
+
+.misEstilos {
+    margin-top: 30px;
+    border: solid black 5px;
+    width: 800px;
+    z-index: 0;
+}
+
+.mainPortfolio img {
+    max-width: 100%;
+}

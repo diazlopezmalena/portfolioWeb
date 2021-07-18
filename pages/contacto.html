@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malena Díaz comunicación digital</title>
+    <title>Contacto | Malena Díaz comunicación digital</title>
+    <meta name="description" content="Contactar a Malena Díaz, Lic en Comunicación Social y estudiante de Desarrollo Web.">
+    <meta name="keywords" content="comunicación digital, desarrollo web, planificación comunicacional, creación de contenidos, servicios profesionales, freelancer">
+    <meta name="author" content="Malena Díaz">
+    <meta property="og: title" content="Contacto | Malena Díaz">
+    <meta property="og: description" content="Contactar a Malena Díaz, Lic en Comunicación Social y estudiante de Desarrollo Web.">
+    <meta property="og: image" content="images/diazmalena-icon.png">
+    <meta property="og: url" content="https://malenadiaz.000webhostapp.com/">
+    <meta property="og: locale" content="es_ES">
+    <link rel="shortcut icon" href="../images/diazmalena-icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/mediaqueries.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!--HEADER-->
     <header>
-        <!--NAV CON BS-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navBs">
-            <div class="container-fluid" id="navBsMenu">
-                <a href="../index.html"><img src="../images/LogoMalenaDiaz.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <!--NAV BS-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navBs">
+            <div class="container-fluid navBsMenu">
+                <a class="navbar-brand" href="../index.html"><img src="../images/LogoMalenaDiaz.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navBsUl">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
@@ -32,11 +42,10 @@
                             <a class="nav-link" href="servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Portfolio
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <ul class="dropdown-menu navBsUlDrop" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="portfolio.html">Diseño Web</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -45,7 +54,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="portfolio.html">Creación de Contenido</a></li>
+                                <li><a class="dropdown-item" href="portfolio.html">Creación de contenidos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -58,8 +67,10 @@
                 </div>
             </div>
         </nav>
+        <!--FIN NAV BS-->
     </header>
-    <main id="mainPContacto">
+    <!--MAIN Page Contacto-->
+    <main class="mainPContacto">
         <h1 id="contacto" data-aos="fade-up" data-aos-duration="1200">Contacto</h1>
         <div class="contenedorContacto" data-aos="fade-left" data-aos-duration="1500">
             <form class="row g-3">
@@ -74,7 +85,7 @@
                 <div class="col-12">
                     <label for="inputServicio" class="form-label">Servicio sobre el que deseás consultar:</label>
                     <select id="inputServicio" class="form-select">
-                        <option selected>Desarrolo Web</option>
+                        <option selected>Desarrollo Web</option>
                         <option>Planificación Comunicacional</option>
                         <option>Creación de contenidos digitales</option>
                     </select>
@@ -87,40 +98,6 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
-
-
-
-
-              <!--
-            <form action="" method="POST">
-                <label for="nombreCliente">Nombre y apellido: </label>
-                <input type="text" id="nombreCliente" placeholder="Nombre">
-                <br>
-                <label for="mail">Correo electrónico: </label>
-                <input type="email" name="" id="mail" placeholder="ejemplo@gmail.com">
-                <br>
-                <label for="cel">Celular: </label>
-                <input type="number" id="cel" placeholder="Solo números">
-                <br>
-                <fieldset>
-                    <legend>Servicio sobre el que deseás consultar: </legend>
-                    <select name="" id="">
-                        <option value="">Desarrollo de Sitios Webs</option>
-                        <option value="">Planificación Comunicacional</option>
-                        <option value="">Creación de contenidos digitales</option>
-                    </select>
-                </fieldset>
-                <br>
-                <label for="mensaje">Tu consulta o solicitud: </label>
-                <br>
-                <textarea name="mensaje" id="" cols="60" rows="10" placeholder="Tu mensaje..."></textarea>
-                <br>
-                <label for="check">¿Querés recibir novedades sobre descuentos?</label>
-                <input type="checkbox" id="check">
-                <br>
-                <input type="submit" value="Enviar formulario">
-                <input type="reset" value="Resetear formulario">
-            </form>-->
         </div>
     </main>
     <!--FOOTER-->
@@ -133,16 +110,9 @@
         </div>
         <div class="footerContacto">
             <div class="footerContactoMail">
-                <h4>También en redes sociales:</h4>
+                <h3>También en redes sociales:</h3>
             </div>
             <div class="footerContactoRedes">
-                <a href="mailto:diazlopezmalena@gmail.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                        <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
-                    </svg>
-                </a>
                 <a href="https://www.linkedin.com/in/malenadiazlopez/" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

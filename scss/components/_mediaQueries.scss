@@ -1,0 +1,315 @@
+@media only screen and (max-width:1024px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .misEstilos {
+        margin-top: 30px;
+    }
+
+    .mainSobremi {
+        justify-content: space-around;
+            
+        .mainSobremiPyB {
+            margin-top: 12%;
+            width: auto;
+            color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            font-size: 15px;
+            margin-right: 40px;
+            padding-bottom: 10%;
+        }
+
+        .mainSobremiImage {
+            height: auto;
+            width: auto;
+        }
+    }
+
+    .footerTitulo h2 {
+        font-size: 40px;
+    }
+
+    /* OTRAS PAGES */
+    /* Contacto */
+    .contenedorContacto {
+        width: 70%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .main {
+        grid-template-rows: 90vh 30vh auto 30vh auto 30vh auto;
+    
+        .mainPresentacion {
+            padding: 35px;
+                
+            h2 {
+                font-size: 20px;
+                padding: 3px;
+            }
+        }
+    
+        .separadorServiciosTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 28vh;
+        
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        .mainServicios {
+        flex-direction: column;
+        padding-bottom: 30px;
+    
+            .mainServiciosCajas {
+                margin: 10px;
+                width: 70%;
+            }
+        }
+
+        .separadorPortfolioTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 30vh;
+        
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        .misEstilos {
+            margin-top: 30px;
+            width: 95%;
+        }
+
+        .separadorSobremiTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 30vh;
+
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        .mainSobremi {
+            flex-direction: column;
+        
+            .mainSobremiPyB {
+                width: 80%;
+                text-align: left;
+                color: #1a1a1a;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        .footerTitulo {
+            color: #ffffff;
+            align-self: center;
+            position: relative;
+            top: 25px;
+        
+            h2 {
+                font-size: 55px;
+            }
+        }
+    }
+
+    /* OTRAS PAGES */
+
+    /* Servicios */
+
+    .contenedorDetalles {
+        grid-template-columns: 10% 80% 10%;
+    }        
+
+    /* portfolio */
+
+    .contenedorPortfolio {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 15px 50px 15px;
+
+        .contenedorPortfolioCotillon, .contenedorPortfolioEsoi, .contenedorPortfolioPsicosocial, .contenedorportfolioAtech, .contenedorPortfolioAulavirtual {
+            height: 70vh;
+        }
+    }
+
+    /* Sobre mí */
+
+    .descargarCV {
+        margin-bottom: 20px;
+    }
+
+    .descargarCV:hover{
+        transform: scale(1.1, 1.1);
+    }
+
+    /* Contacto */
+    
+    .mainPContacto {
+        .contenedorContacto {
+            width: 90%;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #navbarScroll {
+        padding-left: 0%;
+    }
+
+    .main {
+        grid-template-rows: 90vh 30vh auto 30vh auto 30vh auto;
+    
+        .mainPresentacion {
+            padding: 35px;
+        
+            h2 {
+                font-size: 20px;
+                padding: 3px;
+            }
+        }
+    
+        .separadorServiciosTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 28vh;
+
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        .mainServicios {
+            flex-direction: column;
+            padding-bottom: 30px;
+        
+            .mainServiciosCajas {
+                margin: 10px;
+                width: 70%;
+            }
+        }
+
+        .separadorPortfolioTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 30vh;
+        
+            .separadorPortfolioTitulo h2 {
+                font-size: 60px;
+            }
+        }
+
+        .misEstilos {
+            margin-top: 30px;
+            width: 98%;
+        
+            #mainPortfolioButton {
+                padding-bottom: 40px;
+            }
+        }
+        
+        .separadorSobremiTitulo {
+            background-size:100%;
+            align-items: flex-end;
+            height: 30vh;
+        
+            h2 {
+                font-size: 60px;
+            }
+        }
+
+        .mainSobremi {
+            flex-direction: column;
+        
+            .mainSobremiPyB {
+                width: 80%;
+                text-align: left;
+                margin: 3px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        .footerTitulo {
+            color: #ffffff;
+            align-self: center;
+            position: relative;
+            top: 25px;
+        
+            h2 {
+                font-size: 45px;
+            }
+        }
+    }
+
+    /* OTRAS PAGES */
+
+    /* Servicios */
+
+    .contenedorDetalles {
+        grid-template-columns: 5% 90% 5%;
+    }        
+
+    /* Portfolio */
+
+    .contenedorPortfolio {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 15px 50px 15px;
+
+        .contenedorPortfolioCotillon, .contenedorPortfolioEsoi, .contenedorPortfolioPsicosocial, .contenedorportfolioAtech, .contenedorPortfolioAulavirtual {
+            height: 50vh;
+        }
+    }
+
+    /* Sobre mí */
+
+    .descargarCV {
+        margin-bottom: 20px;
+    }
+
+    .descargarCV:hover{
+        transform: scale(1.1, 1.1);
+    }
+
+    /* Contacto */
+    .mainPContacto {
+        .contenedorContacto {
+            width: 90%;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
